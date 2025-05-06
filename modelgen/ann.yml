@@ -1,0 +1,17 @@
+name: ann
+channels:
+  - conda-forge
+dependencies:
+  - python=3.8
+  - keras=2.7
+  - numpy
+  - pandas
+  - matplotlib
+  - scipy
+  - h5py
+  - librosa
+  - grpcio
+  - pip
+  - pip:
+      - tensorflow==2.13.*
+      - tensorflow-datasets

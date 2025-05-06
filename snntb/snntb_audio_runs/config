@@ -1,0 +1,38 @@
+[paths]
+path_wd = /Users/aidenseo/Documents/Development/ECE2195_Project/snntb/snntb_audio_runs
+dataset_path = /Users/aidenseo/Documents/Development/ECE2195_Project/snntb/data
+filename_ann = audio_classifier
+runlabel = audio_classifier_60
+
+[tools]
+evaluate_ann = True
+parse = True
+normalize = True
+simulate = True
+
+[simulation]
+simulator = INI
+duration = 60
+num_to_test = 100
+batch_size = 32
+keras_backend = tensorflow
+
+[input]
+model_lib = keras
+dataset_format = npz
+normalize = True
+filename_test = x_test
+filename_test_labels = y_test
+filename_norm = x_norm
+dataflow_kwargs = {'batch_size': 1}
+
+[normalization]
+percentile = 98.2
+normalization_schedule = False
+weight_normalization = True
+
+[output]
+verbose = 2
+plot_vars = {'activations', 'error_t', 'v_mem', 'correlation', 'normalization_activations', 'operations'}
+overwrite = True
+

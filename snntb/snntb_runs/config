@@ -1,0 +1,24 @@
+[paths]
+path_wd = /home/aiden/CSCE790_neuromorphic_computing/tutorials/snntb/snntb_runs
+dataset_path = /home/aiden/CSCE790_neuromorphic_computing/tutorials/snntb/data
+filename_ann = lenet
+runlabel = lenet_18
+
+[tools]
+evaluate_ann = True
+parse = True
+normalize = True
+simulate = True
+
+[simulation]
+simulator = INI
+duration = 18
+num_to_test = 100
+batch_size = 32
+keras_backend = tensorflow
+
+[output]
+verbose = 0
+plot_vars = {'v_mem', 'spiketrains', 'activations', 'input_image', 'operations', 'spikecounts', 'normalization_activations', 'error_t', 'correlation', 'spikerates'}
+overwrite = True
+
